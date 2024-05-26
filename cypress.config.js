@@ -8,12 +8,18 @@ export default defineConfig({
       framework: "react",
       bundler: "vite",
     },
+
+    e2e: {
+      setupNodeEvents(on, config) {
+        // implement node event listeners here
+      },
+      baseUrl: "http://localhost:7123/", // must be same port as in vite.config.js
+    },
   },
 
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-	baseUrl: 'http://localhost:7123/'  // must be same port as in vite.config.js
   },
 });

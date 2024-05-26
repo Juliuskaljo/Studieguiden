@@ -5,7 +5,6 @@ const Footer = () => {
   const formattedDate = today.toLocaleDateString('sv-SE', {
     day: 'numeric',
     month: 'long',
-    year: 'numeric',
   });
 
   return (

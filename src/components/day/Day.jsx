@@ -1,14 +1,13 @@
 import Item from "./Item"
+import { dayNames } from "../../data/data.js"
 
-// OBS, det är tillåtet att lägga till flera props
-// När du testar, rendera komponenten med olika värden på props
-const Day = ({ day }) => {
-	// TODO: implement rest of week
-	const dayName = 'Måndag'
+const Day = ({ day, dayIndex }) => {
+	
+	const currentDayName = dayNames[dayIndex];
 
 	return (
 		<div className="day">
-			<h2> {dayName} </h2>
+			<h2>{currentDayName}</h2>
 
 			{day.map(item => (
 				<Item key={item.id} item={item} />
